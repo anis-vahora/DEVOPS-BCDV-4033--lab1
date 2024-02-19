@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "npx eslint src/*.js",
+    "lint": "npx eslint src/simpleCalculator.js ",
+    "eslint": "npx eslint src/simpleCalculator.js --fix",
     "style": "prettier --check src/*.js",
     "format": "prettier --write src/*.js",
     "build": "babel src -d dist",
