@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src -d dist",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@babel/cli": "^7.23.9",
     "@babel/core": "^7.23.9",
-    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-env": "^7.23.9"
+  },
+  "devDependencies": {
     "jest": "^29.7.0"
   }
 }
