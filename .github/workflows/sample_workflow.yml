@@ -1,0 +1,13 @@
+name: Sample workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  display_name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: My Name
+        run: echo "Mahammad Anis Vahora"
