@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "npx eslint src/simpleCalculator.js",
-    "style": "prettier --check .",
-    "format": "prettier --write .",
+    "style": "prettier --check src/simpleCalculator.js",
+    "format": "prettier --write src/simpleCalculator.js",
     "build": "babel src -d dist",
     "test": "jest",
     "prepare": "husky install"
