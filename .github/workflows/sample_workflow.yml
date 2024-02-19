@@ -1,4 +1,4 @@
-name: Sample workflow
+name: Display Name Workflow
 
 on:
   push:
@@ -6,8 +6,12 @@ on:
       - main
 
 jobs:
-  display_name:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: My Name
-        run: echo "Mahammad Anis Vahora"
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Echo Name
+        run: echo "Hi,Mahammad Anis Vahora"
