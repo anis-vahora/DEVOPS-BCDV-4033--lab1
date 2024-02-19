@@ -1,9 +1,7 @@
-name: Npm Build & Run Jest Tests
+name: Npm Unit Tests After Build
 
 on:
   push:
-    branches: [main]
-  pull_request:
     branches: [main]
 
 jobs:
@@ -25,11 +23,21 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Run Jest tests
-        run: npm test
+  test:
+    needs: build
+    runs-on: ubuntu-latest
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          name: build-artifacts
-          path: .dist/
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
