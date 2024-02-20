@@ -12,9 +12,7 @@ function multiply(a, b) {
 
 function divide(a, b) {
   if (b === 0) {
-    throw new Error("
-    Invalid Input!
-     Cannot divide by zero");
+    throw new Error("Invalid Input! Cannot divide by zero");
   }
   return a / b;
 }
