@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "babel src -d dist",
-    "test": "jest"
+    "test": "jest",
+    "lint": "prettier --check .",
+    "format": "prettier --write ."
   },
   "author": "",
   "license": "ISC",
@@ -24,7 +26,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": ""
+      "pre-commit": "npm run format"
     }
   }
 }
