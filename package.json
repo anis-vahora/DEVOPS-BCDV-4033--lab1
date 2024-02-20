@@ -6,8 +6,8 @@
   "scripts": {
     "build": "babel src -d dist",
     "test": "jest",
-    "lint": "npx eslint .",
-    "lint:fix": "npx eslint . --fix",
+    "lint": "npx eslint src/*.js",
+    "lint:fix": "npx eslint src/*.js --fix",
     "format": "prettier --write .",
     "precommit": "git-format-staged --formatter 'prettier --stdin' '*.js'",
     "prepare": "husky install"
@@ -37,7 +37,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "npx eslint . --fix",
+      "npx eslint npx eslint src/*.js --fix",
       "git add -A ."
     ]
   },
