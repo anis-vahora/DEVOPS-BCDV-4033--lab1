@@ -9,8 +9,7 @@
     "lint": "npx eslint src/*.js",
     "lint:fix": "npx eslint src/*.js --fix",
     "format": "prettier --write .",
-    "precommit": "git-format-staged --formatter 'prettier --stdin' '*.js'",
-    "prepare": "husky install"
+    "precommit": "git-format-staged --formatter 'prettier --stdin' '*.js'"
   },
   "author": "",
   "license": "ISC",
@@ -23,7 +22,7 @@
     "husky": "^9.0.11"
   },
   "devDependencies": {
-    "eslint": "^8.56.0",
+    "eslint": "^8.3.0",
     "eslint-config-semistandard": "^17.0.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.29.1",
@@ -33,11 +32,11 @@
     "husky": "^8.0.0",
     "jest": "^29.7.0",
     "lint-staged": "^15.2.2",
-    "prettier": "3.2.5"
+    "prettier": "^3.2.5"
   },
   "lint-staged": {
     "*.js": [
-      "npx eslint npx eslint src/*.js --fix",
+      "npx eslint src/*.js --fix",
       "git add -A ."
     ]
   },
